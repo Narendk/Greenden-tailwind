@@ -28,5 +28,6 @@ Clear content layout across all pages
 **🚀 Getting Started**
 
 Just clone the repo and open any of the .html files in your browser:
+https://github.com/Narendk/Greenden-tailwind.git
 
 
