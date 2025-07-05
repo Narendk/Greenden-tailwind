@@ -34,6 +34,22 @@
         </ul>
     </nav>
 
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="flex flex-col gap-3 p-4 text-gray-600 md:hidden bg-green-100 shadow-md">
+        <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+        <li><a class="hover:underline hover:text-black" href="product.html">Products</a></li>
+        <li><a class="hover:underline hover:text-black" href="#">Contact</a></li>
+    </ul>
+
+    <script>
+        const menuIcon = document.querySelector("svg");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuIcon.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
 
     <!--Conatct Form-->
     <div class="p-4 mx-auto max-w-xl bg-white">
