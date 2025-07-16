@@ -15,7 +15,7 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-20">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -34,21 +34,19 @@
         </ul>
     </nav>
 
-    <!-- Mobile Menu -->
-    <ul id="mobile-menu" class="flex flex-col gap-3 p-4 text-base text-gray-600 md:hidden bg-green-100 shadow-md">
-        <li><a class="hover:underline hover:text-black" href="#">Home</a></li>
-        <li><a class="hover:underline hover:text-black" href="product.html">Products</a></li>
-        <li><a class="hover:underline hover:text-black" href="contact.html">Contact</a></li>
-    </ul>
+    <!-- Mobile Navbar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right:-50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        
+        <ul class="flex flex-col gap-10 items-center text-base text-gray-600">
+            <li><a class="hover:underline hover:text-black" href="#">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="product.html">Products</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact</a></li>
+        </ul>
+    </section>
 
-    <script>
-        const menuIcon = document.querySelector("svg");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuIcon.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-    </script>
 
     <!--Header Section-->
     <section class="bg-green-100 p-4 md:p-10 flex justify-center">
@@ -59,7 +57,8 @@
                 <button
                     class="bg-black rounded p-2 text-white hover:bg-green-400 border border-black hover:text-black">Shop
                     Now</button>
-                <button class="border border-black rounded p-2 hover:bg-red-300 hover:text-white">Watch Video</button>
+                <button class="border border-black rounded p-2 hover:bg-red-300 hover:text-white">Watch
+                    Video</button>
             </div>
             <p class="mt-5">160+ Plants Species | 100+ Clients</p>
         </div>
@@ -85,8 +84,10 @@
                 </svg>
 
                 <h2 class="text-xl font-medium">Large Assortment</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nobis minus, cupiditate, enim
-                    deserunt, ipsum voluptas voluptatum laborum odit nihil inventore reiciendis repellat eos eveniet
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nobis minus,
+                    cupiditate, enim
+                    deserunt, ipsum voluptas voluptatum laborum odit nihil inventore reiciendis repellat eos
+                    eveniet
                     iusto odio ea porro rerum?</p>
             </div>
             <div class="border border-black p-2 m-6">
@@ -97,8 +98,10 @@
                 </svg>
 
                 <h2 class="text-xl font-medium">Free and Fast Shipping</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nobis minus, cupiditate, enim
-                    deserunt, ipsum voluptas voluptatum laborum odit nihil inventore reiciendis repellat eos eveniet
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nobis minus,
+                    cupiditate, enim
+                    deserunt, ipsum voluptas voluptatum laborum odit nihil inventore reiciendis repellat eos
+                    eveniet
                     iusto odio ea porro rerum?</p>
             </div>
             <div class="border border-black p-2 m-6">
@@ -109,8 +112,10 @@
                 </svg>
 
                 <h2 class="text-xl font-medium">24/7 Support</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nobis minus, cupiditate, enim
-                    deserunt, ipsum voluptas voluptatum laborum odit nihil inventore reiciendis repellat eos eveniet
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nobis minus,
+                    cupiditate, enim
+                    deserunt, ipsum voluptas voluptatum laborum odit nihil inventore reiciendis repellat eos
+                    eveniet
                     iusto odio ea porro rerum?</p>
             </div>
         </div>
@@ -158,20 +163,26 @@
         <h1 class="font-bold text-3xl mt-5 text-center">Customer Reviews</h1>
         <div class="flex flex-col gap-5 justify-center m-5">
             <div class="bg-green-900 text-white p-5">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptatem natus porro, amet ut, ipsa
-                    asperiores possimus illo libero fugiat deleniti veniam. Perspiciatis vel accusamus cum? Sequi quos
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptatem natus porro, amet
+                    ut, ipsa
+                    asperiores possimus illo libero fugiat deleniti veniam. Perspiciatis vel accusamus cum?
+                    Sequi quos
                     est exercitationem.</p>
                 <p class="text-yellow-300 font-bold">Genny Mathew</p>
             </div>
             <div class="bg-green-900 text-white p-5">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptatem natus porro, amet ut, ipsa
-                    asperiores possimus illo libero fugiat deleniti veniam. Perspiciatis vel accusamus cum? Sequi quos
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptatem natus porro, amet
+                    ut, ipsa
+                    asperiores possimus illo libero fugiat deleniti veniam. Perspiciatis vel accusamus cum?
+                    Sequi quos
                     est exercitationem.</p>
                 <p class="text-yellow-300 font-bold">Jhonny Deep</p>
             </div>
             <div class="bg-green-900 text-white p-5">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptatem natus porro, amet ut, ipsa
-                    asperiores possimus illo libero fugiat deleniti veniam. Perspiciatis vel accusamus cum? Sequi quos
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptatem natus porro, amet
+                    ut, ipsa
+                    asperiores possimus illo libero fugiat deleniti veniam. Perspiciatis vel accusamus cum?
+                    Sequi quos
                     est exercitationem.</p>
                 <p class="text-yellow-300 font-bold">Amir</p>
             </div>
@@ -195,6 +206,9 @@
         <p>The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those intrest</p>
         <p>@2021 Greenday.com</p>
     </section>
+
+
+    <script src="index.js"></script>
 
 </body>
 
